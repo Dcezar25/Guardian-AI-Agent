@@ -1,93 +1,75 @@
-# Dr. Marin Voica - Clinică ORL Website
+# The Guardian - AI Assistant & Community Support
 
-[![React](https://img.shields.io/badge/React-18.3-blue.svg)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/Vite-5.4-purple.svg)](https://vitejs.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue.svg)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC.svg)](https://tailwindcss.com/)
+![The Guardian Banner](src/assets/header2.jpg)
 
-Website de prezentare și programări pentru **Dr. Marin Voica**, medic primar ORL cu peste 30 de ani de experiență, specializat în Rinoplastie, Rinoseptoplastie și Deviație de sept în București.
+## 📖 Overview
+**The Guardian** is a modern, web-based platform designed to provide AI-assisted support, community engagement, and critical emergency tools. Built with React, Vite, and TailwindCSS, it offers a secure, responsive, and accessible environment for users to seek instant advice, remember their medications, and connect with a broader supportive community.
 
-## 🚀 Tehnologii Folosite
+## ✨ Key Features
+- 🤖 **AI Chat Assistant**: Get instant, personalized support and advice from an advanced AI.
+- 🌍 **Community Chat**: Connect with other users in a real-time public chat room for shared experiences and peer support.
+- 🚨 **Emergency Panic Button**: Instantly share your live GPS location via WhatsApp to a trusted emergency contact and log the alert securely on the backend.
+- 💊 **Medication & Health Reminders**: Opt-in browser notifications to remind you to take medications or attend to health needs regularly.
+- 🔒 **Flexible Authentication**: Create an account to save your chat history, or proceed seamlessly as a **Guest** for complete privacy (no history saved).
+- 📥 **Download Transcripts**: Easily download your AI conversation history as a text file for your records.
 
-Acest proiect este construit folosind un stack tehnologic modern pentru a asigura performanță înaltă, SEO de top și o experiență excelentă de utilizare (UX):
+## 🛠️ Tech Stack
+- **Frontend**: React 19, TypeScript, Vite
+- **Styling**: TailwindCSS, React Icons
+- **Backend / API**: Node.js, Express, Twilio, Dotenv
+- **Linting & Formatting**: ESLint
 
-- **Framework:** [React 18](https://react.dev/) + [Vite](https://vitejs.dev/)
-- **Limbaj:** [TypeScript](https://www.typescriptlang.org/)
-- **Stilizare:** [Tailwind CSS](https://tailwindcss.com/)
-- **Componente UI:** [shadcn/ui](https://ui.shadcn.com/) (bazat pe Radix UI primitives)
-- **Animații & Carousel:** [Embla Carousel](https://www.embla-carousel.com/), [Tailwindcss Animate](https://github.com/jamiebuilds/tailwindcss-animate)
-- **Routing:** [React Router v6](https://reactrouter.com/)
-- **Formulare:** React Hook Form + Zod
+## 🚀 Getting Started
 
-## ✨ Funcționalități Principale
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) (v18+ recommended) and npm installed on your machine.
 
-- **Design Responsiv:** Interfață adaptată și testată pe toate dispozitivele (mobil, tabletă, desktop).
-- **Sistem Automatizat de Galerii Foto:**
-  - Paginile de proceduri și pagina de Galerie preiau și afișează **automat** fotografiile pacienților dintr-un folder specific. 
-  - Aliniere perfectă a pozelor "Înainte/După" și carusel interactiv, fără a necesita modificări în cod.
-- **Optimizare SEO:** Meta tag-uri Open Graph, Twitter Cards, Schema.org JSON-LD pentru rich snippets (MedicalBusiness/Physician), structură semantică optimizată.
-- **Performanță:** Generare rapidă a modulelor cu Vite, încărcare optimizată a imaginilor.
+### Installation
 
-## 📂 Structura Proiectului
-
-```text
-src/
-├── assets/         # Imagini statice și foldere automate (galerie/, proceduri/)
-├── components/     # Componente React reutilizabile
-│   ├── site/       # Componente specifice paginilor (Hero, About, Contact etc.)
-│   └── ui/         # Componente din biblioteca shadcn/ui
-├── lib/            # Funcții utilitare și configurări (ex. className utils)
-├── pages/          # Componentele principale de rutare (Index, Gallery, ProcedureDetails)
-├── App.tsx         # Componenta principală și definiția rutelor
-└── main.tsx        # Punctul de intrare (entry point) în aplicație
-```
-
-## 📸 Managementul Imaginilor
-
-Unul dintre atuurile acestui proiect este **sistemul automat de gestionare a fotografiilor pacienților**. Adăugarea pozelor noi în galerii se face simplu, prin drag & drop în foldere, fără să fie nevoie de o bază de date complexă sau de modificări în codul sursă.
-
-Pentru instrucțiuni complete și detaliate despre cum să schimbi pozele pe site, te rugăm să consulți ghidul oficial din proiect:  
-👉 **[GHID_UPLOAD_POZE.md](./GHID_UPLOAD_POZE.md)**
-
-## 💻 Instalare & Rulare Locală
-
-Pentru a rula și dezvolta acest proiect pe mașina locală, ai nevoie de [Node.js](https://nodejs.org/) instalat.
-
-1. **Clonează repository-ul:**
+1. **Clone the repository:**
    ```bash
-   git clone <URL_REPOSITORY>
-   cd varcopiere
+   git clone https://github.com/Dcezar25/Guardian-AI-Agent.git
+   cd Guardian-AI-Agent
    ```
 
-2. **Instalează dependențele:**
-   Proiectul suportă `npm` dar are fișiere de lock și pentru `bun` (`bun.lockb`). Poți folosi managerul preferat:
+2. **Install dependencies:**
    ```bash
    npm install
-   # sau folosind bun:
-   bun install
    ```
 
-3. **Pornește serverul de dezvoltare:**
-   ```bash
-   npm run dev
-   # sau folosind bun:
-   bun dev
-   ```
-   Aplicația va fi disponibilă în browser la adresa afișată în terminal (de obicei `http://localhost:5173`).
+3. **Set up Environment Variables:**
+   Create a `.env` file in the root directory and configure your necessary environment variables (e.g., API keys, backend URL, Twilio credentials).
 
-## 🛠️ Comenzi (Scripts) Disponibile
+### Running the Application
 
-| Comandă | Descriere |
-|---------|-----------|
-| `npm run dev` | Pornește serverul local de dezvoltare cu Hot Module Replacement (HMR). |
-| `npm run build` | Compilează și optimizează aplicația pentru producție (în folderul `dist/`). |
-| `npm run preview` | Pornește un server web local care servește build-ul de producție (pentru testare finală). |
-| `npm run lint` | Rulează ESLint pentru a identifica probleme de cod sau stilizare. |
+**Start the Development Server (Frontend):**
+```bash
+npm run dev
+```
+The application will typically be available at `http://localhost:5173`.
 
-## 📝 Informații Medicale & Contact
+**Start the Backend Server:**
+Ensure your `server.js` or backend API is running on port 5000 (default configuration for the Panic Button API):
+```bash
+npm run start
+```
 
-- **Medic:** Dr. Marin Voica
-- **Website Live:** [drmarinvoica.ro](https://drmarinvoica.ro/)
+**Build for Production:**
+```bash
+npm run build
+npm run preview
+```
 
----
-*Acest fișier a fost generat pentru a facilita documentarea, mentenanța și dezvoltarea viitoare a proiectului web.*
+## 📱 Usage Guide
+
+- **Configuring Emergency Contact**: Click the **Settings (Gear)** icon on the sidebar and enter a trusted phone number (in WhatsApp format, e.g., `40722123456`).
+- **Triggering the Panic Button**: Click the pulsing red **Alert** icon. The app will fetch your GPS location and automatically format a WhatsApp message containing a Google Maps link to your exact location, while simultaneously alerting the backend.
+- **Enabling Health Reminders**: Click the **Pills** icon and toggle reminders ON. You must allow browser notifications when prompted.
+- **Switching Views**: Use the Sidebar to switch seamlessly between the personal **AI Assistant** and the **Community Chat**.
+
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome! 
+Feel free to check out the [issues page](https://github.com/Dcezar25/Guardian-AI-Agent/issues) if you want to contribute.
+
+## 📝 License
+This project is licensed under the **ISC** License.
